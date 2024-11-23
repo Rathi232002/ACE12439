@@ -1,0 +1,337 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Consolas;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red127\green0\blue85;\red0\green0\blue0;\red63\green127\blue95;\red0\green0\blue192;\red106\green62\blue62;\red42\green0\blue255;\red212\green212\blue212;\red100\green100\blue100;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang9 Object-Oriented Programming (OOP) \par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Class\par
+{\pntext\f3\'B7\tab}Object\par
+{\pntext\f3\'B7\tab}Encapsulation\par
+{\pntext\f3\'B7\tab}Abstraction\par
+{\pntext\f3\'B7\tab}Inheritance\par
+{\pntext\f3\'B7\tab}Polymorphism\par
+
+\pard\sa200\sl276\slmult1\par
+\b Class\par
+\b0 A class is a template from which objects are created. It has the properties (attributes) and Methods as a single unit.An object is an instance of a class. \par
+\par
+Example: \par
+Employee Class\par
+\cf1\b\f1\fs20 package\cf2\b0  com.aspiresys;\cf0\par
+\par
+\cf1\b class\cf2\b0  Employee \{\cf0\par
+\cf2\tab\cf3 // Attributes\cf0\par
+\cf2\tab String \cf4 name\cf2 ;\cf0\par
+\cf2\tab\cf1\b int\cf2\b0  \cf4 age\cf2 ;\cf0\par
+\cf2\tab\cf1\b double\cf2\b0  \cf4 salary\cf2 ;\cf0\par
+\par
+\cf2\tab\cf3 // Constructor to initialize an employee object\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  Employee(String \cf5 name\cf2 , \cf1\b int\cf2\b0  \cf5 age\cf2 , \cf1\b double\cf2\b0  \cf5 salary\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf4 name\cf2  = \cf5 name\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf4 age\cf2  = \cf5 age\cf2 ;\cf0\par
+\cf2\tab\tab\cf1\b this\cf2\b0 .\cf4 salary\cf2  = \cf5 salary\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf3 // Method\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b void\cf2\b0  display() \{\cf0\par
+\cf2\tab\tab System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Name:"\cf2  + \cf4 name\cf2 );\cf0\par
+\cf2\tab\tab System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Age:"\cf2  + \cf4 age\cf2 );\cf0\par
+\cf2\tab\tab\cf0\par
+\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf3 // Method to get the salary\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b double\cf2\b0  getSalary() \{\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf4 salary\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  Main \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String \cf5 args\cf2 []) \{\cf0\par
+\par
+\cf2\tab\tab\cf3 // Creating an Employee object\cf0\par
+\cf2\tab\tab Employee \cf5 emp1\cf2  = \cf1\b new\cf2\b0  Employee(\cf6 "Raj"\cf2 , 30, 50000);\cf0\par
+\par
+\cf2\tab\tab\cf3 // Using the methods of the Employee object\cf0\par
+\cf2\tab\tab\cf5 emp1\cf2 .display();\cf0\par
+\cf2\tab\tab System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Salary: "\cf2  + \cf5 emp1\cf2 .getSalary());\cf0\par
+\par
+\cf2\tab\}\cf0\par
+\cf2\}\par
+\par
+\b\f2\lang1033 Output\b0 :\par
+\f1 Name:Raj\cf0\par
+\cf2 Age:30\cf0\par
+\cf2 Salary: 50000.0\cf0\par
+\f2\lang9\par
+\f0\fs28 Explanation:\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Attributes: name, age, and salary describe the employee.\par
+{\pntext\f3\'B7\tab}Constructor: Used to initialize the values of name, age, and salary.\par
+{\pntext\f3\'B7\tab}Method: display() displays the employee details, and getSalary() returns the employee's salary.\par
+{\pntext\f3\'B7\tab}emp1 is an object of the Employee class.\par
+{\pntext\f3\'B7\tab}The object emp1 calls the display() method and gets the salary using getSalary().\par
+
+\pard\sa200\sl276\slmult1\par
+\b Encapsulation\par
+\b0 Encapsulation is the concept of hiding the internal state of an object and only allowing controlled access to it via public methods.this focuses on keeping data safe inside an object and providing methods to access and modify that data safely \par
+\par
+Example: \par
+Employee Class with Encapsulation\par
+\cf1\b\f1\fs20 package\cf2\b0  com.aspiresys;\cf0\par
+\par
+\cf1\b class\cf2\b0  Employee \{\cf0\par
+\cf2\tab  \cf3 // Private attribute\cf0\par
+\cf2     \cf1\b private\cf2\b0  String \cf4 aathar\cf2 ;\cf0\par
+\par
+\cf2     \cf3 // Constructor to initialize \ul aathar\ulnone  number\cf0\par
+\cf2     \cf1\b public\cf2\b0  Employee(String \cf5 aathar\cf2 ) \{\cf0\par
+\cf2         \cf1\b this\cf2\b0 .\cf4 aathar\cf2  = \cf5 aathar\cf2 ;\cf0\par
+\cf2     \}\cf0\par
+\par
+\cf2     \cf0\par
+\par
+\cf2\tab\cf3 // Getter method to access \ul aathar\cf0\ulnone\par
+\cf2     \cf1\b public\cf2\b0  String getAathar() \{\cf0\par
+\cf2         \cf1\b return\cf2\b0  \cf4 aathar\cf2 ;\cf0\par
+\cf2     \}\cf0\par
+\par
+\cf2     \cf3 // Setter method to modify \ul aathar\cf0\ulnone\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  setAathar(String \cf5 aathar\cf2 ) \{\cf0\par
+\cf2         \cf1\b long\cf2\b0  \cf5 num\cf2  = Long.\i parseLong\i0 (\cf5 aathar\cf2 );\cf0\par
+\par
+\cf2         \cf1\b if\cf2\b0  (\cf5 num\cf2  > 0 && (\cf5 aathar\cf2 .length()==12)) \{\cf0\par
+\cf2             \cf1\b this\cf2\b0 .\cf4 aathar\cf2  = \cf5 aathar\cf2 ;\cf0\par
+\cf2         \} \cf1\b else\cf2\b0  \{\cf0\par
+\cf2             System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Invalid Aathar Number"\cf2 );\cf0\par
+\cf2         \}\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  Main \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String \cf5 args\cf2 []) \{\cf0\par
+\par
+\cf2\tab\tab  Employee \cf5 emp1\cf2  = \cf1\b new\cf2\b0  Employee(\cf6 "904215187293"\cf2 );\cf0\par
+\cf2\tab         \cf0\par
+\cf2\tab         \cf3 // Accessing and modifying \ul aathar\ulnone  number using getter and setter\cf0\par
+\cf2\tab         System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Aathar number "\cf2  + \cf5 emp1\cf2 .getAathar());  \cf0\par
+\cf2\tab         \cf5 emp1\cf2 .setAathar(\cf6 "837414524523"\cf2 );\cf0\par
+\cf2\tab         System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Updated Aathar: "\cf2  + \cf5 emp1\cf2 .getAathar());  \cf0\par
+\cf2\tab         \cf5 emp1\cf2 .setAathar(\cf6 "-100"\cf2 ); \cf0\par
+\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\f2\lang1033 Output:\par
+\cf2\f1 Aathar number 904215187293\cf0\par
+\cf2 Updated Aathar: 837414524523\cf0\par
+\cf2 Invalid Aathar Number\cf0\par
+\b\f0\fs28\lang9 Explanation:\b0\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 The salary attribute is private. It can't be accessed directly from outside the class.\par
+{\pntext\f3\'B7\tab}Setter: setAathar() allows modifying the aathar number with a check to ensure it's not negative and its length.\par
+{\pntext\f3\'B7\tab}Getter: getAathar() provides access to the current Aathar.\par
+
+\pard\sa200\sl276\slmult1\par
+\b Abstraction\par
+\b0 Abstraction is the process of hiding complex implementation details and exposing only the essential functionality. This is often done using abstract classes or interfaces.\par
+\par
+Example: \par
+\cf1\b\f1\fs20 package\cf2\b0  com.aspiresys;\cf0\par
+\par
+\cf1\b abstract\cf2\b0  \cf1\b class\cf2\b0  BankAccount \{\cf0\par
+\cf2     \cf3 // attributes\cf0\par
+\cf2     String \cf4 accountHolder\cf2 ;\cf0\par
+\cf2     \cf1\b double\cf2\b0  \cf4 balance\cf2 ;\cf0\par
+\par
+\cf2     \cf3 // Abstract method \cf0\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b abstract\cf2\b0  \cf1\b void\cf2\b0  deposit(\cf1\b double\cf2\b0  \cf5 amount\cf2 );\cf0\par
+\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b double\cf2\b0  getBalance() \{\cf0\par
+\cf2         \cf1\b return\cf2\b0  \cf4 balance\cf2 ;\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  SavingsAccount \cf1\b extends\cf2\b0  BankAccount \{\cf0\par
+\cf2     \cf3 // Constructor\cf0\par
+\cf2     \cf1\b public\cf2\b0  SavingsAccount(String \cf5 accountHolder\cf2 , \cf1\b double\cf2\b0  \cf5 balance\cf2 ) \{\cf0\par
+\cf2         \cf1\b this\cf2\b0 .\cf4 accountHolder\cf2  = \cf5 accountHolder\cf2 ;\cf0\par
+\cf2         \cf1\b this\cf2\b0 .\cf4 balance\cf2  = \cf5 balance\cf2 ;\cf0\par
+\cf2     \}\cf0\par
+\par
+\cf2     \cf3 // Implementation of deposit method for SavingsAccount\cf0\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  deposit(\cf1\b double\cf2\b0  \cf5 amount\cf2 ) \{\cf0\par
+\cf2         \cf4 balance\cf2  += \cf5 amount\cf2 ;\cf0\par
+\cf2         System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Deposited: "\cf2  + \cf5 amount\cf2 );\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  CheckingAccount \cf1\b extends\cf2\b0  BankAccount \{\cf0\par
+\cf2     \cf1\b public\cf2\b0  CheckingAccount(String \cf5 accountHolder\cf2 , \cf1\b double\cf2\b0  \cf5 balance\cf2 ) \{\cf0\par
+\cf2         \cf1\b this\cf2\b0 .\cf4 accountHolder\cf2  = \cf5 accountHolder\cf2 ;\cf0\par
+\cf2         \cf1\b this\cf2\b0 .\cf4 balance\cf2  = \cf5 balance\cf2 ;\cf0\par
+\cf2     \}\cf0\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  deposit(\cf1\b double\cf2\b0  \cf5 amount\cf2 ) \{\cf0\par
+\cf2         \cf4 balance\cf2  += \cf5 amount\cf2 ;\cf0\par
+\cf2         System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Deposited: "\cf2  + \cf5 amount\cf2 );\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\par
+\cf1\b class\cf2\b0  Main \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String \cf5 args\cf2 []) \{\cf0\par
+\cf2\tab\tab BankAccount \cf5 savings\cf2  = \cf1\b new\cf2\b0  SavingsAccount(\cf6 "Alice"\cf2 , 1000);\cf0\par
+\cf2\tab\tab\cf5 savings\cf2 .deposit(500);\cf0\par
+\cf2\tab\tab System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Balance: "\cf2  + \cf5 savings\cf2 .getBalance());\cf0\par
+\par
+\cf2\tab\tab BankAccount \cf5 checking\cf2  = \cf1\b new\cf2\b0  CheckingAccount(\cf6 "Bob"\cf2 , 2000);\cf0\par
+\cf2\tab\tab\cf5 checking\cf2 .deposit(1000);\cf0\par
+\cf2\tab\tab System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Balance: "\cf2  + \cf5 checking\cf2 .getBalance());\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\cf0\par
+\f2\lang1033 Output:\par
+\cf2\f1 Deposited: 500.0\cf0\par
+\cf2 Balance: 1500.0\cf0\par
+\cf2 Deposited: 1000.0\cf0\par
+\cf2 Balance: 3000.0\cf0\par
+\f0\fs28\lang9\par
+Explanation:\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 BankAccount is an abstract class that provides a general blueprint for any kind of bank account.\par
+{\pntext\f3\'B7\tab}The method deposit() is abstract, meaning each type of account (like SavingsAccount and CheckingAccount) must provide its own implementation of how deposits are handled.\par
+
+\pard\sa200\sl276\slmult1\par
+\b Inheritance\b0\par
+Inheritance allows one class to inherit the attributes and methods of another class, which promotes code reuse and extensibility.\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Single Inheritance(there is one parent class and one child class)\par
+
+\pard\sa200\sl276\slmult1 Employee class inherits the organization class , employee has access to attributes of organization class and functions\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Multi Level inheritance(has parent class , child class and grand child class)\par
+
+\pard\sa200\sl276\slmult1 Employee class inherits the organization class and Manager class inherits employee class, employee has access to attributes of organization class and functions and Manager has access to attributes of Employee class and functions\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Hierarchical Inheritance\par
+
+\pard\sa200\sl276\slmult1 Manager class inherits employee class and developer class inherits the employee class , Manager has access to attributes of Employee class and functions and Developer has access to attributes of Employee class and functions\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Hybrid Inheritance\par
+
+\pard\sa200\sl276\slmult1\par
+Example: \par
+Inheritance with Student and Employee Classes\par
+\cf1\b\f1\fs20 package\cf2\b0  com.aspiresys;\cf0\par
+\par
+\cf1\b class\cf2\b0  Person \{\cf0\par
+\cf2     String \cf4 name\cf2 ;\cf0\par
+\cf2     \cf1\b int\cf2\b0  \cf4 age\cf2 ;\cf0\par
+\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  displayInfo() \{\cf0\par
+\cf2         System.\cf4\highlight7\b\i out\cf2\highlight0\b0\i0 .println(\cf6 "Name: "\cf2  + \cf4 name\cf2  + \cf6 ", Age: "\cf2  + \cf4 age\cf2 );\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  Student \cf1\b extends\cf2\b0  Person \{\cf0\par
+\cf2     String \cf4 studentID\cf2 ;\cf0\par
+\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  study() \{\cf0\par
+\cf2         System.\cf4\highlight7\b\i out\cf2\highlight0\b0\i0 .println(\cf4 name\cf2  + \cf6 " is studying."\cf2 );\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf1\b class\cf2\b0  Employee \cf1\b extends\cf2\b0  Person \{\cf0\par
+\cf2     \cf1\b double\cf2\b0  \cf4 salary\cf2 ;\cf0\par
+\par
+\cf2     \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  work() \{\cf0\par
+\cf2         System.\cf4\highlight7\b\i out\cf2\highlight0\b0\i0 .println(\cf4 name\cf2  + \cf6 " is working."\cf2 );\cf0\par
+\cf2     \}\cf0\par
+\cf2\}\cf0\par
+\par
+\par
+\par
+\cf1\b class\cf2\b0  Main \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String \cf5 args\cf2 []) \{\cf0\par
+\cf2     Student \cf5 student\cf2  = \cf1\b new\cf2\b0  Student();\cf0\par
+\cf2     \cf5 student\cf2 .\cf4 name\cf2  = \cf6 "Ram"\cf2 ;\cf0\par
+\cf2     \cf5 student\cf2 .\cf4 age\cf2  = 10;\cf0\par
+\cf2     \cf5 student\cf2 .\cf4 studentID\cf2  = \cf6 "S123"\cf2 ;\cf0\par
+\cf2     \cf5 student\cf2 .displayInfo(); \cf0\par
+\cf2     \cf5 student\cf2 .study();  \cf0\par
+\par
+\cf2     Employee \cf5 employee\cf2  = \cf1\b new\cf2\b0  Employee();\cf0\par
+\cf2     \cf5 employee\cf2 .\cf4 name\cf2  = \cf6 "Priya"\cf2 ;\cf0\par
+\cf2     \cf5 employee\cf2 .\cf4 age\cf2  = 28;\cf0\par
+\cf2     \cf5 employee\cf2 .\cf4 salary\cf2  = 60000;\cf0\par
+\cf2     \cf5 employee\cf2 .displayInfo(); \cf0\par
+\cf2     \cf5 employee\cf2 .work();  \cf0\par
+\cf2\}\cf0\par
+\par
+\cf2\}\par
+\f2\lang1033 Output:\par
+\f1 Name: Ram, Age: 10\cf0\par
+\cf2 Ram is studying.\cf0\par
+\cf2 Name: Priya, Age: 28\cf0\par
+\cf2 Priya is working.\cf0\par
+\f0\fs28\lang9\par
+\b Explanation:\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Student and Employee inherit from the Person class.\par
+{\pntext\f3\'B7\tab}Person class has shared attributes like name and age, which are inherited by both Student and Employee.\par
+{\pntext\f3\'B7\tab}Student has its own method study(), while Employee has work().\par
+
+\pard\sa200\sl276\slmult1\par
+\b Polymorphism\par
+
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Polymorphism means many forms, allowing different objects to respond to the same method name in their own way.\par
+{\pntext\f3\'B7\tab}Performing similar operations on different datatypes we can use method overloading(Compile time polymorphism) . Like calculator , with 2 parameters it make different operations addition , subraction , multiplication and division.\par
+{\pntext\f3\'B7\tab}Providing default values for parameters we can use method over ridding(Run time polymorphism) . In a shop the default values for each procuct would be there, we can apply discount for some products alone by passing the dicount as a parameter.\par
+
+\pard\sa200\sl276\slmult1\par
+Example:\par
+\cf1\b\f1\fs20 package\cf2\b0  com.aspiresys;\cf0\par
+\par
+\cf3 //Parent class (Ticket)\cf0\par
+\cf1\b class\cf2\b0  Ticket \{\cf0\par
+\cf2  String \cf4 ticketNumber\cf2 ;\cf0\par
+\cf2  \cf0\par
+\cf2  \cf1\b public\cf2\b0  Ticket(String \cf5 ticketNumber\cf2 ) \{\cf0\par
+\cf2      \cf1\b this\cf2\b0 .\cf4 ticketNumber\cf2  = \cf5 ticketNumber\cf2 ;\cf0\par
+\cf2  \}\cf0\par
+\cf2  \cf0\par
+\cf2  \cf3 // Method to be overridden\cf0\par
+\cf2  \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  bookTicket() \{\cf0\par
+\cf2      System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Booking ticket with ticket number: "\cf2  + \cf4 ticketNumber\cf2 );\cf0\par
+\cf2  \}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf3 //Child class (ConcertTicket)\cf0\par
+\cf1\b class\cf2\b0  ConcertTicket \cf1\b extends\cf2\b0  Ticket \{\cf0\par
+\cf2  \cf1\b public\cf2\b0  ConcertTicket(String \cf5 ticketNumber\cf2 ) \{\cf0\par
+\cf2      \cf1\b super\cf2\b0 (\cf5 ticketNumber\cf2 );\cf0\par
+\cf2  \}\cf0\par
+\cf2  \cf0\par
+\cf2  \cf3 // Overriding bookTicket method for ConcertTicket\cf0\par
+\cf2  \cf8 @Override\cf0\par
+\cf2  \cf1\b public\cf2\b0  \cf1\b void\cf2\b0  bookTicket() \{\cf0\par
+\cf2      System.\cf4\b\i out\cf2\b0\i0 .println(\cf6 "Booking concert ticket with ticket number: "\cf2  + \cf4 ticketNumber\cf2 );\cf0\par
+\cf2  \}\cf0\par
+\cf2\}\cf0\par
+\par
+\par
+\par
+\cf1\b class\cf2\b0  Main \{\cf0\par
+\cf2\tab   \cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String[] \cf5 args\cf2 ) \{\cf0\par
+\cf2\tab         \cf3 // Create objects of different ticket types\cf0\par
+\cf2\tab         Ticket \cf5 ticket1\cf2  = \cf1\b new\cf2\b0  ConcertTicket(\cf6 "C123"\cf2 );\cf0\par
+\cf2\tab        \cf0\par
+\par
+\cf2\tab         \cf3 // Booking tickets using the common method\cf0\par
+\cf2\tab         \cf5 ticket1\cf2 .bookTicket();  \cf3 // Output: Booking concert ticket with ticket number: C123\cf0\par
+\cf2\tab     \cf0\par
+\cf2\tab     \}\cf0\par
+\par
+\cf2\}\cf0\par
+\f0\fs28 Output:\par
+\cf2\f1\fs20 Booking concert ticket with ticket number: C123\cf0\par
+\f0\fs28\par
+}
+ 
